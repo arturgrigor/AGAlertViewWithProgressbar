@@ -3,11 +3,16 @@
 //  AGAlertViewWithProgressbar Demo
 //
 //  Created by Artur Grigor on 23.04.2012.
-//  Copyright (c) 2012 Universitatea "Babes-Bolyai". All rights reserved.
+//  Copyright (c) 2012 Artur Grigor. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface AGViewController : UIViewController
+#import "AGAlertViewWithProgressbar.h"
+
+@interface AGViewController : UIViewController<UIAlertViewDelegate>
+
+- (IBAction)showAction:(id)sender;
+- (IBAction)incrementProgress:(id)sender;
 
 @end

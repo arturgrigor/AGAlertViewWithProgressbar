@@ -16,6 +16,8 @@
 		FE5D6EA91545484600ABEB29 /* AGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5D6EA81545484600ABEB29 /* AGViewController.m */; };
 		FE5D6EAC1545484600ABEB29 /* AGViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5D6EAA1545484600ABEB29 /* AGViewController_iPhone.xib */; };
 		FE5D6EAF1545484600ABEB29 /* AGViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5D6EAD1545484600ABEB29 /* AGViewController_iPad.xib */; };
+		FE5D6EB8154548AF00ABEB29 /* AGAlertViewWithProgressbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5D6EB7154548AF00ABEB29 /* AGAlertViewWithProgressbar.m */; };
+		FE5D6EBA1545490500ABEB29 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FE5D6EB91545490500ABEB29 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +25,19 @@
 		FE5D6E951545484600ABEB29 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FE5D6E971545484600ABEB29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FE5D6E991545484600ABEB29 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FE5D6E9D1545484600ABEB29 /* AGAlertViewWithProgressbar Demo-Info.plist */ = {isa = PBXFileReference; path = "AGAlertViewWithProgressbar Demo-Info.plist"; sourceTree = "<group>"; };
+		FE5D6E9D1545484600ABEB29 /* AGAlertViewWithProgressbar Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AGAlertViewWithProgressbar Demo-Info.plist"; sourceTree = "<group>"; };
 		FE5D6E9F1545484600ABEB29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE5D6EA11545484600ABEB29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FE5D6EA31545484600ABEB29 /* AGAlertViewWithProgressbar Demo-Prefix.pch */ = {isa = PBXFileReference; path = "AGAlertViewWithProgressbar Demo-Prefix.pch"; sourceTree = "<group>"; };
-		FE5D6EA41545484600ABEB29 /* AGAppDelegate.h */ = {isa = PBXFileReference; path = AGAppDelegate.h; sourceTree = "<group>"; };
+		FE5D6EA31545484600ABEB29 /* AGAlertViewWithProgressbar Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AGAlertViewWithProgressbar Demo-Prefix.pch"; sourceTree = "<group>"; };
+		FE5D6EA41545484600ABEB29 /* AGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGAppDelegate.h; sourceTree = "<group>"; };
 		FE5D6EA51545484600ABEB29 /* AGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGAppDelegate.m; sourceTree = "<group>"; };
-		FE5D6EA71545484600ABEB29 /* AGViewController.h */ = {isa = PBXFileReference; path = AGViewController.h; sourceTree = "<group>"; };
+		FE5D6EA71545484600ABEB29 /* AGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGViewController.h; sourceTree = "<group>"; };
 		FE5D6EA81545484600ABEB29 /* AGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGViewController.m; sourceTree = "<group>"; };
 		FE5D6EAB1545484600ABEB29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AGViewController_iPhone.xib; sourceTree = "<group>"; };
 		FE5D6EAE1545484600ABEB29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AGViewController_iPad.xib; sourceTree = "<group>"; };
+		FE5D6EB6154548AF00ABEB29 /* AGAlertViewWithProgressbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGAlertViewWithProgressbar.h; sourceTree = "<group>"; };
+		FE5D6EB7154548AF00ABEB29 /* AGAlertViewWithProgressbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGAlertViewWithProgressbar.m; sourceTree = "<group>"; };
+		FE5D6EB91545490500ABEB29 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +57,7 @@
 		FE5D6E861545484600ABEB29 = {
 			isa = PBXGroup;
 			children = (
+				FE5D6EB5154548AF00ABEB29 /* AGAlertViewWithProgressbar */,
 				FE5D6E9B1545484600ABEB29 /* AGAlertViewWithProgressbar Demo */,
 				FE5D6E941545484600ABEB29 /* Frameworks */,
 				FE5D6E921545484600ABEB29 /* Products */,
@@ -101,6 +107,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FE5D6EB5154548AF00ABEB29 /* AGAlertViewWithProgressbar */ = {
+			isa = PBXGroup;
+			children = (
+				FE5D6EB6154548AF00ABEB29 /* AGAlertViewWithProgressbar.h */,
+				FE5D6EB7154548AF00ABEB29 /* AGAlertViewWithProgressbar.m */,
+				FE5D6EB91545490500ABEB29 /* LICENSE */,
+			);
+			path = AGAlertViewWithProgressbar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,7 +145,7 @@
 			attributes = {
 				CLASSPREFIX = AG;
 				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = "Universitatea \"Babes-Bolyai\"";
+				ORGANIZATIONNAME = "Artur Grigor";
 			};
 			buildConfigurationList = FE5D6E8B1545484600ABEB29 /* Build configuration list for PBXProject "AGAlertViewWithProgressbar Demo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -156,6 +172,7 @@
 				FE5D6EA01545484600ABEB29 /* InfoPlist.strings in Resources */,
 				FE5D6EAC1545484600ABEB29 /* AGViewController_iPhone.xib in Resources */,
 				FE5D6EAF1545484600ABEB29 /* AGViewController_iPad.xib in Resources */,
+				FE5D6EBA1545490500ABEB29 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +186,7 @@
 				FE5D6EA21545484600ABEB29 /* main.m in Sources */,
 				FE5D6EA61545484600ABEB29 /* AGAppDelegate.m in Sources */,
 				FE5D6EA91545484600ABEB29 /* AGViewController.m in Sources */,
+				FE5D6EB8154548AF00ABEB29 /* AGAlertViewWithProgressbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +225,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -232,7 +250,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
