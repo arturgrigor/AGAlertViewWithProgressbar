@@ -26,6 +26,7 @@
 @property (nonatomic, retain) NSString *cancelButtonTitle;
 @property (nonatomic, retain) NSArray *otherButtonTitles;
 @property (nonatomic, assign) id<UIAlertViewDelegate> delegate;
+@property (nonatomic, readonly, getter=isVisible) BOOL visible;
 
 - (id)initWithTitle:(NSString *)theTitle message:(NSString *)theMessage andDelegate:(id<UIAlertViewDelegate>)theDelegate;
 - (id)initWithTitle:(NSString *)theTitle message:(NSString *)theMessage delegate:(id)theDelegate cancelButtonTitle:(NSString *)titleForTheCancelButton otherButtonTitles:(NSString *)titleForTheFirstButton, ... NS_REQUIRES_NIL_TERMINATION;

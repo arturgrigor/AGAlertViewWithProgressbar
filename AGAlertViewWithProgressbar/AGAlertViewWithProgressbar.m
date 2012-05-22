@@ -29,8 +29,8 @@
 }
 
 @property (nonatomic, retain) UIAlertView *alertView;
-@property (retain) UIProgressView *progressView;
-@property (retain) UILabel *progressLabel;
+@property (nonatomic, retain) UIProgressView *progressView;
+@property (nonatomic, retain) UILabel *progressLabel;
 
 - (void)repositionControls;
 - (void)setAutoresizingMask;
@@ -43,6 +43,11 @@
 #pragma mark - Properties
 
 @synthesize progress, title, message, delegate, cancelButtonTitle, otherButtonTitles;
+
+- (BOOL)isVisible
+{
+    return self.alertView.visible;
+}
 
 - (void)setProgress:(NSUInteger)theProgress
 {
@@ -113,6 +118,7 @@
         
         cancelButtonTitle = [theCancelButtonTitle retain];
         
+        [self hide];
         self.alertView = nil;
     }
 }
@@ -127,6 +133,7 @@
         
         otherButtonTitles = [theOtherButtonTitles retain];
         
+        [self hide];
         self.alertView = nil;
     }
 }
@@ -153,6 +160,8 @@
 
 - (void)dealloc
 {
+    [self hide];
+    
     self.alertView = nil;
     self.progressView = nil;
     self.progressLabel = nil;
@@ -167,42 +176,48 @@
 
 - (id)initWithTitle:(NSString *)theTitle message:(NSString *)theMessage delegate:(id)theDelegate cancelButtonTitle:(NSString *)titleForTheCancelButton otherButtonTitles:(NSString *)titleForTheFirstButton, ... NS_REQUIRES_NIL_TERMINATION
 {
-    self = [super init];
-    if (self)
-    {
-        NSMutableArray *otherButtonTitlesArray = [[NSMutableArray alloc] init];
-        
-        va_list args;
-        va_start(args, titleForTheFirstButton);
-        for (NSString *arg = titleForTheFirstButton; arg != nil; arg = va_arg(args, NSString*))
-        {
-            [otherButtonTitlesArray addObject:arg];
-        }
-        va_end(args);
-        
-        self.progress = 0;
-        self.message = theMessage;
-        self.title = theTitle;
-        self.delegate = theDelegate;
-        self.cancelButtonTitle = titleForTheCancelButton;
-        self.otherButtonTitles = otherButtonTitlesArray;
-        
-        [otherButtonTitlesArray release];
-    }
+self = [super init];
+if (self)
+{
+    NSMutableArray *otherButtonTitlesArray = [[NSMutableArray alloc] init];
     
-    return self;
+    va_list args;
+    va_start(args, titleForTheFirstButton);
+    for (NSString *arg = titleForTheFirstButton; arg != nil; arg = va_arg(args, NSString*))
+    {
+        [otherButtonTitlesArray addObject:arg];
+    }
+    va_end(args);
+    
+    self.progress = 0;
+    self.message = theMessage;
+    self.title = theTitle;
+    self.delegate = theDelegate;
+    self.cancelButtonTitle = titleForTheCancelButton;
+    self.otherButtonTitles = otherButtonTitlesArray;
+    
+    [otherButtonTitlesArray release];
+}
+
+return self;
 }
 
 #pragma mark - Public Methods
 
 - (void)show
 {
-    [self.alertView show];
+    if (! self.visible)
+    {
+        [self.alertView show];
+    }
 }
 
 - (void)hide
 {
-    [self.alertView dismissWithClickedButtonIndex:0 animated:YES];
+    if (self.visible)
+    {
+        [self.alertView dismissWithClickedButtonIndex:0 animated:YES];
+    }
 }
 
 #pragma mark - UIAlertViewDelegate Methods
@@ -266,7 +281,7 @@
     NSInteger idx = 0;
     for (UIView *subview in self.alertView.subviews)
     {
-        if (([subview isKindOfClass:[UILabel class]]))
+        if (([subview isKindOfClass:[UILabel class]]) && subview != self.progressLabel)
         {
             idx++;
             

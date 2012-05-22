@@ -268,6 +268,7 @@
 		FE5D6EB31545484600ABEB29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AGAlertViewWithProgressbar Demo/AGAlertViewWithProgressbar Demo-Prefix.pch";
 				INFOPLIST_FILE = "AGAlertViewWithProgressbar Demo/AGAlertViewWithProgressbar Demo-Info.plist";
@@ -306,6 +307,7 @@
 				FE5D6EB41545484600ABEB29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

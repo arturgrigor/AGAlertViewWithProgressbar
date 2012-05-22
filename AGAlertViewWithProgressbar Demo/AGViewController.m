@@ -42,7 +42,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        alertViewWithProgressbar = [[AGAlertViewWithProgressbar alloc] initWithTitle:@"Doing something." message:@"Please wait..." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+        alertViewWithProgressbar = [[AGAlertViewWithProgressbar alloc] initWithTitle:@"Doing something." message:@"Please wait..." delegate:self cancelButtonTitle:@"Hide" otherButtonTitles:nil];
     }
     
     return self;
